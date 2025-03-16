@@ -1,3 +1,4 @@
+
 ## City Suggestion
 
 This is my submission for the city suggestion test.
@@ -60,9 +61,13 @@ Here is an example:
         ]
     }
 You can also add latitude and longitude as parameters for better result:
+
     /suggestions?q=La%20Prai&latitude=45.41678&longitude=-73.49917
+
 The above request will result in this output:
-    {
+   
+
+     {
         "suggestions": [
             {
                 "name": "La Prairie",
@@ -78,10 +83,16 @@ The above request will result in this output:
             }
         ]
     }
+
 You can also add paginations
-    /suggestions?q=Ab&pageNo=4&pageSize=5
+   
+
+     /suggestions?q=Ab&pageNo=4&pageSize=5
+
 which will result in:
-    {
+   
+
+     {
         "suggestions": [
             {
                 "name": "Aberdeen",
@@ -115,4 +126,5 @@ which will result in:
             }
         ]
     }
+
 By default pageNo is set to 1 and pageSize is set to 5
