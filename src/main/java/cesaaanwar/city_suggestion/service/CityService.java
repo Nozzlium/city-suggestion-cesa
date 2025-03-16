@@ -46,9 +46,10 @@ public class CityService {
         }
         Collections.sort(res);
 
+        if (pageNo >= res.size()) return new ArrayList<>();
         int realPageSize = pageSize;
-        if (res.size() < pageSize) realPageSize = res.size();
-        return res.subList(pageNo, realPageSize);
+        if ((res.size() - pageNo) < pageSize) realPageSize = (res.size() - pageNo);
+        return res.subList(pageNo, pageNo + realPageSize);
     }
 
     private CitySuggestion scoreCityResult(City city, String[] tokens, double latVal, double longVal) {
